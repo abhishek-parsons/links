@@ -1,15 +1,116 @@
 /* These styles are just to make it easier to see the blocks, initially. */
+@font-face {
+  font-family: "gtpb";
+  src: url("./fonts/GT-Pressura-Black-Trial.woff2");
+}
 
-body { padding: 2em; }
+@font-face {
+  font-family: "gtpm";
+  src: url("./fonts/GT-Pressura-Medium-Trial.woff2");
+}
 
-a { color: blue; }
-em { font-style: italic; }
-strong { font-weight: bold; }
+@font-face {
+  font-family: "gtpt";
+  src: url("./fonts/GT-Pressura-Text-Trial.woff2");
+}
 
-body,
-section,
-ul,
-figure {
-	display: grid;
-	gap: 1em;
+body {
+  background: #191515;
+  font-family: "gtpt", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+h1.channel-title {
+  font-family: "gtpb";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 77.02%;
+  /* or 55px */
+
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.channel-description {
+  font-family: "gtpt";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130.5%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 12px;
+}
+
+.title-grid {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  z-index: 3;
+}
+
+.title-desc {
+  width: 500px;
+  justify-self: center;
+  background-color: #191515;
+  padding: 50px;
+}
+
+.image-grid-1 {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  overflow-y: hidden;
+}
+
+.image-grid-1 li:nth-child(4n + 2) {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  opacity: 20%;
+  filter: blur(0.2rem);
+}
+.image-grid-1 li:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+.image-grid-1 li:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.image-grid-1 > * {
+  transform: translatey(0px);
+  animation: float 20s ease-in-out infinite;
+  filter: grayscale(1);
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0%) translateZ(0);
+  }
+  50% {
+    transform: translateX(10%) translateZ(0);
+  }
+  100% {
+    transform: translateX(0%) translateZ(0);
+  }
+}
+
+.audio-element {
+  z-index: 5;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
