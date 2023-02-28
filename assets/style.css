@@ -81,6 +81,7 @@ body {
   top: 0;
   z-index: 2;
   animation: float 15s ease-in-out infinite;
+  filter: grayscale(1);
 }
 
 .grid1 > li:nth-child(even) {
@@ -100,6 +101,7 @@ body {
   filter: blur(2px);
   animation: float 25s ease-in-out infinite;
   opacity: 0.6;
+  filter: grayscale(1);
 }
 
 .grid2 > li:nth-child(odd) {
