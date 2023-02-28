@@ -98,10 +98,9 @@ body {
   width: 100%;
   top: 0;
   z-index: 1;
-  filter: blur(2px);
   animation: float 25s ease-in-out infinite;
   opacity: 0.6;
-  filter: grayscale(1);
+  filter: grayscale(1) blur(2px);
 }
 
 .grid2 > li:nth-child(odd) {
