@@ -127,3 +127,17 @@ body {
     transform: translateX(0%) translateZ(0);
   }
 }
+
+@media only screen and (min-width: 970px) {
+  .title-grid {
+    width: 100%;
+    padding: 0px 200px;
+  }
+}
+
+@media only screen and (min-width: 1112px) {
+  .title-grid {
+    width: 100%;
+    padding: 0px 300px;
+  }
+}
