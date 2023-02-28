@@ -114,6 +114,7 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
+  z-index: 100;
 }
 
 @keyframes float {
@@ -139,5 +140,19 @@ body {
   .title-grid {
     width: 100%;
     padding: 0px 300px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .title-grid {
+    width: 100%;
+    padding: 0px 400px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .title-grid {
+    width: 100%;
+    padding: 0px 1000px;
   }
 }
