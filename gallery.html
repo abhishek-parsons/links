@@ -17,6 +17,9 @@
     />
   </head>
   <body>
+    <a href="./menu.html"
+      ><span class="material-symbols-rounded back-button"> arrow_back </span></a
+    >
     <section>
       <a
         href="https://www.are.na/caroline-que/modern-dance-fedxlnnbm5u"
@@ -33,8 +36,9 @@
     </div>
 
     <ul class="image-blocks gallery-grid"></ul>
+    <!-- Images. -->
     <template id="image-block">
-      <li>
+      <li class="animate__animated animate__fadeIn">
         <figure class="image-block">
           <picture>
             <source class="image-thumb" />
@@ -42,6 +46,7 @@
             <source class="image-display" />
             <img class="image" />
           </picture>
+          <h3 class="title"></h3>
         </figure>
       </li>
     </template>
