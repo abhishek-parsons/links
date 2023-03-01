@@ -64,7 +64,7 @@ body {
   justify-content: center;
   margin-top: 20px;
   color: #191515;
-  background: rgba(255, 230, 0, 0.809);
+  background: rgba(255, 230, 0);
   border-radius: 4px;
   font-size: 16px;
   line-height: 145%;
@@ -129,6 +129,56 @@ body {
   }
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  padding: 70px 25px;
+}
+
+.back-button {
+  position: fixed;
+  padding: 20px;
+}
+
+.menu > * {
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu > *:hover {
+  cursor: pointer;
+  background-color: rgb(62, 62, 62);
+}
+
+.menu h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-family: gtpm;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: rgba(255, 230, 0);
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu > * {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
 @media only screen and (min-width: 970px) {
   .title-grid {
     width: 100%;
@@ -140,6 +190,21 @@ body {
   .title-grid {
     width: 100%;
     padding: 0px 300px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 0px 200px;
+  }
+
+  .menu > * {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 400px;
   }
 }
 
